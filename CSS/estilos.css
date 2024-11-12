@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilod de la barra de navegacion  */
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 65px;
+    
+}
+body{
+    padding-top: 80px;
+}
+
+header{
+    background-color: #abd1df;
+    height: 75px;
+    position: fixed;
+    width: 100%;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    margin-right: 8px;
+    color: black;
+    
+    
+}
+a:hover{
+    border-bottom: 4px rgb(88, 131, 78) solid;
+}
