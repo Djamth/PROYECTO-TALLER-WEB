@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 80px;
+    font-family: sans-serif;
+    background-color: rgb(205, 235, 235);
+}
+/* Estilos de la barra de navegacion  */
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 65px;
+    
+}
+
+header{
+    font-family: sans-serif;
+    font-weight: bold;
+    background: linear-gradient( rgb(16, 150, 212) 20%, white 80%);
+    color: black;
+    height: 75px;
+    position: fixed;
+    width: 100%;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul.nav-links{
+    display: flex;
+    list-style: none;
+}
+
+nav ul.nav-links.active li {
+    margin: 1rem 0;
+}
+
+nav ul.nav-links.active li a {
+    color: #000;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    margin-right: 8px;
+    color: black;
+    
+    
+}
+a:hover{
+    border-bottom: 4px rgb(88, 131, 78) solid;
+}
+
+nav ul.nav-links.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgb(68, 224, 224) ;
+    padding: 1rem;
+    text-align: right;
+
+}
+
+
+
+@media (max-width:768px){
+    nav ul.nav-links{
+        display: none;
+        flex-direction: column;
+    }
+    .hamburger{
+        display: block;
+    }
+}
