@@ -3,17 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
-<<<<<<< HEAD
-
-/* Estilod de la barra de navegacion  */
-=======
 body{
     padding-top: 80px;
     font-family: sans-serif;
     background-color: rgb(205, 235, 235);
 }
 /* Estilos de la barra de navegacion  */
->>>>>>> pagina_inicio
 .logo{
     display: flex;
     align-items: center;
@@ -22,21 +17,12 @@ body{
     height: 65px;
     
 }
-<<<<<<< HEAD
-body{
-    padding-top: 80px;
-}
-
-header{
-    background-color: #abd1df;
-=======
 
 header{
     font-family: sans-serif;
     font-weight: bold;
     background: linear-gradient( rgb(16, 150, 212) 20%, white 80%);
     color: black;
->>>>>>> pagina_inicio
     height: 75px;
     position: fixed;
     width: 100%;
@@ -44,12 +30,8 @@ header{
     justify-content: center;
     align-items: center;
     top: 0;
-<<<<<<< HEAD
-    
-=======
     left: 0;
     z-index: 1000;
->>>>>>> pagina_inicio
 
 }
 nav{
@@ -57,17 +39,11 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-<<<<<<< HEAD
-nav ul {
-=======
 nav ul.nav-links{
->>>>>>> pagina_inicio
     display: flex;
     list-style: none;
 }
 
-<<<<<<< HEAD
-=======
 nav ul.nav-links.active li {
     margin: 1rem 0;
 }
@@ -82,7 +58,6 @@ nav ul.nav-links.active li a {
     cursor: pointer;
 }
 
->>>>>>> pagina_inicio
 
 nav ul li a {
     text-decoration: none;
@@ -93,8 +68,6 @@ nav ul li a {
 }
 a:hover{
     border-bottom: 4px rgb(88, 131, 78) solid;
-<<<<<<< HEAD
-=======
 }
 
 nav ul.nav-links.active {
@@ -118,5 +91,4 @@ nav ul.nav-links.active {
     .hamburger{
         display: block;
     }
->>>>>>> pagina_inicio
 }
