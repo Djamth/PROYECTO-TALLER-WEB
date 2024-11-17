@@ -6,155 +6,110 @@
 
 body {
     font-family: sans-serif;
-    background-color: rgb(205, 235, 235);
 }
 
 /********************************************************/
-/*                         Header                       */
+/*                    Estilos Header                    */
 /********************************************************/
 
 header {
+    background-color: #e4eed6;
+    color: #000;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+.nav-container {
+    margin-left: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    background-color: #f8f8f8;
-    padding: 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 .logo img {
-    max-height: 50px;
+    max-width: 75px;
     margin-right: 10px;
 }
 
-.nav-container {
-    width: 100%;
-    background-color: #70ca68;
-    /* Color de fondo del menú de navegación */
-    text-align: center;
-    padding: 10px 0;
-}
-
 .nav-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Centrar verticalmente */
-}
-
-.nav-links li {
-    margin: 0 15px;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
-    /* Color del texto */
-    font-weight: bold;
-    display: block;
-    padding: 10px 20px;
+    color: #0f0f0f;
 }
 
 .nav-links a:hover {
-    background-color: #0056b3;
-    /* Color de fondo al pasar el ratón */
-    border-radius: 5px;
+    color: #519e32;
+    border-bottom: 2px #21149b solid;
 }
 
 .hamburger {
     display: none;
-    /* Ocultar el icono de hamburguesa por defecto */
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
 }
-
-
 
 
 /********************************************************/
 /*                         Inicio                       */
 /********************************************************/
 
+/* Sección de inicio */
 .Inicio {
-    background-image: url('/IMG/PORTADA.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 150px 20px;
+    position: relative;
+    background: url("/IMG/FONDO.jpeg") no-repeat center center/cover;
     height: 100vh;
-    /* Altura completa de la pantalla */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.contenido-inicio {
-    max-width: 700px;
     text-align: center;
-}
-
-.contenido-inicio h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.contenido-inicio p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
-
-.contenido-inicio .btn {
-    background-color: #ffcc00;
-    /* Miel */
-    color: black;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.contenido-inicio .btn:hover {
-    background-color: #ff9900;
-    /* Cambio de color al pasar el ratón */
+    color: #fff;
+    padding: 60px 20px 20px; 
 }
 
 
-
-
-
-/* Estilos para la Seccion del footer */
+/********************************************************/
+/*                         Footer                      */
+/********************************************************/
 .footer {
     background-color: #000;
     color: #fff;
     width: 100%;
-    padding: 20px;
+    padding: 15px;
 
 }
 
-.footer-logo {
+.footer-logo, .footer-container {
     border-bottom: #534d4d 2px solid;
     margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .footer-container {
     display: flex;
     gap: 8rem;
-    border-bottom: #534d4d 2px solid;
-
 }
 
 .footer-container ul li {
     list-style: none;
-    line-height: 1.3;
+    line-height: 1.5;
 }
 
 .footer-section-visita li {
@@ -174,66 +129,85 @@ footer a {
 
 .footer-container a:hover {
     color: #1e39cf;
-    background-color: rgba(32, 32, 31, 0.753);
+    background-color: rgba(32, 32, 31, 0.7);
 }
 
 .footer-bottom {
     text-align: center;
+    padding: 1rem 0;
+    background-color: #000; 
+    color: #fff; 
 }
 
-@media (max-width: 768px) {
-    .nav-container {
-        position: relative;
-        height: 60px;
-        background-color: transparent;
-    }
+.footer-bottom .social-icons {
+    margin-top: 0.5rem;
+}
 
+.footer-bottom .social-icons a {
+    margin: 0 10px; /* Espaciado entre íconos */
+    color: #fff; 
+    font-size: 1.5rem; 
+    
+}
+
+.footer-bottom .social-icons a:hover {
+    color: #f1c40f; /* Cambia el color al pasar el mouse */
+}
+
+
+/****************************************************/
+/*    Estilos para pantallas pequeñas               */
+/****************************************************/
+
+@media (max-width: 768px) {
+    /* Header */
     .nav-links {
-        flex-direction: column;
         display: none;
-        /* Ocultar el menú por defecto en pantallas pequeñas */
-        position: fixed;
-        top: 0;
-        left: 0;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 60px;
+        right: 0;
         width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        /* Fondo transparente */
-        z-index: 1;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
+        z-index: 100;
     }
 
     .nav-links.active {
         display: flex;
-        /* Mostrar el menú cuando está activo */
     }
 
     .nav-links li {
-        margin: 20px 0;
-        text-align: center;
-        /* Centrar el texto horizontalmente */
+        padding: 15px;
     }
 
-    .nav-links a {
-        padding: 15px 20px;
-        /* Aumentar el padding para centrar verticalmente */
+    .nav-links li a {
+        color: white;
     }
 
     .hamburger {
         display: block;
-        /* Mostrar el icono de hamburguesa en pantallas pequeñas */
-        cursor: pointer;
-        font-size: 24px;
-        color: #000;
-        position: absolute;
-        top: 10px;
-        right: 20px;
+    }
+
+    /* Footer */
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-section-visita li {
+        justify-content: center;
+    }
+
+    .footer-section-explorar,
+    .footer-section-visita {
+        width: 100%;
     }
 }
-
-
-
-
-
 
