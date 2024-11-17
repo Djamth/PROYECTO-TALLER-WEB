@@ -1,94 +1,213 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    padding-top: 80px;
+
+body {
     font-family: sans-serif;
-    background-color: rgb(205, 235, 235);
 }
-/* Estilos de la barra de navegacion  */
-.logo{
-    display: flex;
-    align-items: center;
-}
-.logo img{
-    height: 65px;
+
+/********************************************************/
+/*                    Estilos Header                    */
+/********************************************************/
+
+header {
+    background-color: #e4eed6;
+    color: #000;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
     
 }
 
-header{
-    font-family: sans-serif;
-    font-weight: bold;
-    background: linear-gradient( rgb(16, 150, 212) 20%, white 80%);
-    color: black;
-    height: 75px;
-    position: fixed;
-    width: 100%;
-    padding: 8px;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-
-}
-nav{
+.nav-container {
+    margin-left: 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
-nav ul.nav-links{
+
+.logo {
     display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 75px;
+    margin-right: 10px;
+}
+
+.nav-links {
     list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul.nav-links.active li {
-    margin: 1rem 0;
+.nav-links a {
+    text-decoration: none;
+    color: #0f0f0f;
 }
 
-nav ul.nav-links.active li a {
-    color: #000;
+.nav-links a:hover {
+    color: #519e32;
+    border-bottom: 2px #21149b solid;
 }
 
 .hamburger {
     display: none;
-    font-size: 2rem;
+    font-size: 24px;
     cursor: pointer;
+    color: #000;
 }
 
 
-nav ul li a {
-    text-decoration: none;
+/********************************************************/
+/*                         Inicio                       */
+/********************************************************/
+
+/* Sección de inicio */
+.Inicio {
+    position: relative;
+    background: url("/IMG/FONDO.jpeg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 60px 20px 20px; 
+}
+
+
+/********************************************************/
+/*                         Footer                      */
+/********************************************************/
+.footer {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+
+}
+
+.footer-logo, .footer-container {
+    border-bottom: #534d4d 2px solid;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.footer-container {
+    display: flex;
+    gap: 8rem;
+}
+
+.footer-container ul li {
+    list-style: none;
+    line-height: 1.5;
+}
+
+.footer-section-visita li {
+    display: flex;
+    align-items: center;
+}
+
+.footer-section-visita img {
     margin-right: 8px;
-    color: black;
+    height: 18px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #7d7a8a;
+}
+
+.footer-container a:hover {
+    color: #1e39cf;
+    background-color: rgba(32, 32, 31, 0.7);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #000; 
+    color: #fff; 
+}
+
+.footer-bottom .social-icons {
+    margin-top: 0.5rem;
+}
+
+.footer-bottom .social-icons a {
+    margin: 0 10px; /* Espaciado entre íconos */
+    color: #fff; 
+    font-size: 1.5rem; 
     
-    
-}
-a:hover{
-    border-bottom: 4px rgb(88, 131, 78) solid;
 }
 
-nav ul.nav-links.active {
-    display: block;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: rgb(68, 224, 224) ;
-    padding: 1rem;
-    text-align: right;
-
+.footer-bottom .social-icons a:hover {
+    color: #f1c40f; /* Cambia el color al pasar el mouse */
 }
 
 
+/****************************************************/
+/*    Estilos para pantallas pequeñas               */
+/****************************************************/
 
-@media (max-width:768px){
-    nav ul.nav-links{
+@media (max-width: 768px) {
+    /* Header */
+    .nav-links {
         display: none;
         flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 100;
     }
-    .hamburger{
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 15px;
+    }
+
+    .nav-links li a {
+        color: white;
+    }
+
+    .hamburger {
         display: block;
     }
+
+    /* Footer */
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-section-visita li {
+        justify-content: center;
+    }
+
+    .footer-section-explorar,
+    .footer-section-visita {
+        width: 100%;
+    }
 }
+
