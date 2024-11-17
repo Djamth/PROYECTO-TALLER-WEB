@@ -1,94 +1,239 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    padding-top: 80px;
+
+body {
     font-family: sans-serif;
     background-color: rgb(205, 235, 235);
 }
-/* Estilos de la barra de navegacion  */
-.logo{
+
+/********************************************************/
+/*                         Header                       */
+/********************************************************/
+
+header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-}
-.logo img{
-    height: 65px;
-    
+    background-color: #f8f8f8;
+    padding: 20px;
 }
 
-header{
-    font-family: sans-serif;
-    font-weight: bold;
-    background: linear-gradient( rgb(16, 150, 212) 20%, white 80%);
-    color: black;
-    height: 75px;
-    position: fixed;
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+.nav-container {
     width: 100%;
-    padding: 8px;
+    background-color: #70ca68;
+    /* Color de fondo del menú de navegación */
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-
-}
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-nav ul.nav-links{
-    display: flex;
-    list-style: none;
+    /* Centrar verticalmente */
 }
 
-nav ul.nav-links.active li {
-    margin: 1rem 0;
+.nav-links li {
+    margin: 0 15px;
 }
 
-nav ul.nav-links.active li a {
-    color: #000;
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    /* Color del texto */
+    font-weight: bold;
+    display: block;
+    padding: 10px 20px;
+}
+
+.nav-links a:hover {
+    background-color: #0056b3;
+    /* Color de fondo al pasar el ratón */
+    border-radius: 5px;
 }
 
 .hamburger {
     display: none;
-    font-size: 2rem;
-    cursor: pointer;
+    /* Ocultar el icono de hamburguesa por defecto */
 }
 
 
-nav ul li a {
-    text-decoration: none;
-    margin-right: 8px;
+
+
+/********************************************************/
+/*                         Inicio                       */
+/********************************************************/
+
+.Inicio {
+    background-image: url('/IMG/PORTADA.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+    height: 100vh;
+    /* Altura completa de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-inicio {
+    max-width: 700px;
+    text-align: center;
+}
+
+.contenido-inicio h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contenido-inicio p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.contenido-inicio .btn {
+    background-color: #ffcc00;
+    /* Miel */
     color: black;
-    
-    
-}
-a:hover{
-    border-bottom: 4px rgb(88, 131, 78) solid;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-nav ul.nav-links.active {
-    display: block;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: rgb(68, 224, 224) ;
-    padding: 1rem;
-    text-align: right;
-
+.contenido-inicio .btn:hover {
+    background-color: #ff9900;
+    /* Cambio de color al pasar el ratón */
 }
 
 
 
-@media (max-width:768px){
-    nav ul.nav-links{
-        display: none;
+
+
+/* Estilos para la Seccion del footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+
+}
+
+.footer-logo {
+    border-bottom: #534d4d 2px solid;
+    margin-bottom: 10px;
+}
+
+.footer-container {
+    display: flex;
+    gap: 8rem;
+    border-bottom: #534d4d 2px solid;
+
+}
+
+.footer-container ul li {
+    list-style: none;
+    line-height: 1.3;
+}
+
+.footer-section-visita li {
+    display: flex;
+    align-items: center;
+}
+
+.footer-section-visita img {
+    margin-right: 8px;
+    height: 18px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #7d7a8a;
+}
+
+.footer-container a:hover {
+    color: #1e39cf;
+    background-color: rgba(32, 32, 31, 0.753);
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        position: relative;
+        height: 60px;
+        background-color: transparent;
+    }
+
+    .nav-links {
         flex-direction: column;
+        display: none;
+        /* Ocultar el menú por defecto en pantallas pequeñas */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        /* Fondo transparente */
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
     }
-    .hamburger{
+
+    .nav-links.active {
+        display: flex;
+        /* Mostrar el menú cuando está activo */
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        text-align: center;
+        /* Centrar el texto horizontalmente */
+    }
+
+    .nav-links a {
+        padding: 15px 20px;
+        /* Aumentar el padding para centrar verticalmente */
+    }
+
+    .hamburger {
         display: block;
+        /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+        cursor: pointer;
+        font-size: 24px;
+        color: #000;
+        position: absolute;
+        top: 10px;
+        right: 20px;
     }
 }
+
+
+
+
+
+
