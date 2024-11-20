@@ -120,6 +120,7 @@ header {
     max-width: 600px;
     margin: 0 auto;
     animation: fadeIn 1.5s ease-out;
+    margin-bottom: 30px;
 }
 
 .btn {
