@@ -1,0 +1,135 @@
+body {
+font-family: sans-serif;
+background-color: #C6AE9C;
+color: #121212;
+margin: 0;
+padding: 0;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+min-height: 100vh;
+}
+.container {
+
+width: 80%;
+max-width: 500px;
+background-color: #C6AE9C;
+padding-top: 50px;
+border-radius: 50px;
+box-shadow: 0px 4px 8px rgba(52, 49, 49, 0.2);
+text-align: center;
+margin: auto;
+}
+h1 {
+font-size: 3.5em;
+color: #000000;
+margin-top: 30px;
+margin-bottom: 10px;
+}
+h2 {
+font-size: 1.5em;
+color: #000000;
+margin-top: 30px;
+margin-bottom: 10px;
+}
+p {
+font-size: 1em;
+line-height: 1.6;
+text-align: justify;
+color: #0c0c0c;
+margin: 0 auto;
+max-width: 800px;
+}
+.valores {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+margin-top: 10px;
+}
+.valor-item {
+font-size: 1em;
+color: #333;
+}
+.horario {
+margin-top: 30px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 10px;
+font-size: 1em;
+}
+th, td {
+border: 1px solid #ccc;
+padding: 8px;
+text-align: center;
+}
+th {
+background-color: #d1a34a;
+color: #fff;
+}
+.direccion {
+margin-top: 20px;
+font-weight: bold;
+color: #333;
+}
+/* Estilos para la sección de copyright y redes sociales */
+.footer {
+text-align: center;
+margin-top: 20px;
+padding: 10px 0;
+background-color: #C6AE9C;
+border-top: 1px solid #000000;
+font-family: sans-serif;
+font-size: 14px;
+color: #e20202;
+}
+
+.footer p {
+margin: 5px 0;
+font-weight: bold;
+}
+
+.social-icons {
+margin-top: 10px;
+}
+
+.social-icons a {
+margin: 0 10px;
+display: inline-block;
+text-decoration: none;
+}
+
+.social-icons img {
+width: 32px;
+height: 32px;
+transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+transform: scale(1.1);
+}
+/* Contenedor de los botones */
+.back-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: right;
+}
+
+/* Estilo de los botones */
+.btn-back {
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block; /* Asegura que cada enlace esté en su propia línea */
+    margin-bottom: 5px; /* Espaciado entre enlaces */
+    transition: color 0.3s ease; /* Efecto de transición para el hover */
+}
+
+/* Efecto hover */
+.btn-back:hover {
+    color: #007BFF; /* Cambia el color cuando el usuario pasa el mouse */
+}
