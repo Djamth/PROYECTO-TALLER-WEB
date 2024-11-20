@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)),url(/IMG/miel.jpg);
+    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)),url("/PROYECTO-TALLER-WEB/IMG/miel.jpg");
     
     background-size: cover;
     background-position: center center;
