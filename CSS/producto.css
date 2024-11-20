@@ -79,3 +79,31 @@ button {
 button:hover {
     background-color: #E68A00; /* Color de fondo al pasar el mouse */
 }
+@media (max-width: 768px) {
+    #filters {
+        width: 100%; 
+        float: none; 
+        margin: 0 auto 20px; 
+    }
+
+    #products {
+        margin-left: 0; 
+        justify-content: center; 
+    }
+
+    .product {
+        width: 100%; 
+        max-width: 90%; 
+        margin: 10px auto; 
+    }
+
+    .price-buy-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    button {
+        margin-top: 10px;
+        width: 100%; 
+    }
+}
