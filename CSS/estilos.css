@@ -75,7 +75,7 @@ header {
 /* Sección de inicio */
 .Inicio {
     position: relative;
-    background: url("/IMG/FONDO.jpeg") no-repeat center center/cover;
+    background: url("../IMG/FONDO.jpeg") no-repeat center center/cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -358,7 +358,7 @@ iframe {
 /* *********************************************/
 
 .container {
-    background:url(/IMG/MIEL.jpg);
+    background:url(../IMG/MIEL.jpg);
     width: 100%;
     background-size: cover;
     background-position: center center;
