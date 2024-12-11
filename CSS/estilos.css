@@ -171,8 +171,10 @@ header {
     }
 }
 
+/*************************************************************/
+/* ***********************Seccion de Productos**********/
+/*************************************************************/
 
-/* Seccion de Productos*/
 .section-products {
     padding: 20px;
     text-align: center;
@@ -263,7 +265,7 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    
 }
 
 .add-to-cart:hover {
