@@ -210,10 +210,11 @@ header {
     flex-wrap: wrap;
     justify-content: start;
     gap: 20px;
+    
 }
 
 .product-card {
-    width: 300px;
+    width: 290px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     background-color: #fff;
