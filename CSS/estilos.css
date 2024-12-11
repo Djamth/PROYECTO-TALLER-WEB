@@ -280,9 +280,22 @@ header {
         flex-direction: column;
         align-items: center;
     }
-    .product-filter{
+    .filter-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        margin: 0 auto;
+        gap: 10px;
+    }
+
+    .filter-bar select {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .filter-bar label {
+        margin: 0;
     }
 }
 
