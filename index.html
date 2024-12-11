@@ -244,19 +244,26 @@
                 </div>
             </div>
             <form>
+
                 <div class="input-box">
-                    <input type="text" required placeholder="Nombre y Apellido">
+                    <input type="text" required pattern="[a-z A-Z]+" minlength="3"
+                    placeholder="Nombre y Apellido">
                 </div>
                 <div class="input-box">
-                    <input type="email" required placeholder="Correo electronico">
+                    <input type="email" required
+                    placeholder="Correo electronico">
                 </div>
                 <div class="input-box">
-                    <input type="text" required placeholder="Asunto">
+                    <input type="text" required pattern="[0-9]+" minlength="9" maxlength="9"
+                    placeholder="Telefono">
                 </div>
                 <div class="input-box">
-                    <textarea cols="30" rows="10" placeholder="Dejanos tu mensaje"></textarea>
+                    <textarea cols="30" rows="10"
+                    placeholder="Dejanos tu mensaje"></textarea>
                 </div>
+
                 <button type="submit">Enviar mensaje</button>
+
             </form>
         </div>
     </section>
