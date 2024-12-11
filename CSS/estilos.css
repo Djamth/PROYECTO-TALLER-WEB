@@ -277,6 +277,10 @@ header {
         flex-direction: column;
         align-items: center;
     }
+    .product-filter{
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
 /* ************************************************/
@@ -810,7 +814,7 @@ footer a {
 
 @media (max-width: 768px) {
     header{
-        background-color: ghostwhite;
+        background-color: #34a14b;
     }
 
     /* Header */
