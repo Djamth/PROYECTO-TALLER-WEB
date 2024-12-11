@@ -36,7 +36,7 @@
 
     <section id="Inicio" class="Inicio">
         <div class="contenido-inicio">
-            <h2>Bienvenidos</h2>
+            <h2>Bienvenidos </h2>
             <p>La mejor miel orgánica, directamente de nuestras colmenas a tu hogar.</p>
             <a href="#products" class="btn">Ver nuestros productos</a>
         </div>
@@ -46,59 +46,76 @@
 
     <section id="products" class="section-products">
         <h1 class="section-title">Nuestros Productos Apícolas</h1>
-        <p class="section-description">Descubre nuestra selección de productos apícolas de alta calidad, perfectos para
-            todas tus necesidades.</p>
+        <p class="section-description">Descubre nuestra selección de productos apícolas de alta calidad, perfectos para todas tus necesidades.</p>
+
+        <div class="filter-bar">
+            <label for="product-filter">Filtrar por:</label>
+            <select id="product-filter" onchange="filterProducts()">
+                <option value="all">Todos</option>
+                <option value="miel">Miel</option>
+                <option value="polen">Polen</option>
+                <option value="jalea">Jalea Real</option>
+                <option value="propoleo">Propóleo</option>
+            </select>
+        </div>
+
         <div id="products">
-            <div class="product">
+            <div class="product-card" data-category="miel">
                 <img src="IMG/miel1k.jpg" alt="Miel 1kg">
-                <h3>Miel 1kg</h3>
-                <div class="price-buy-container">
-                    <p>S/30.00</p>
-                    <button>Comprar</button>
+                <div class="product-details">
+                    <h3 class="product-title">Miel 1kg</h3>
+                    <p class="product-price">S/30.00</p>
+                    <a href="#" class="add-to-cart">Comprar</a>
                 </div>
             </div>
-            <div class="product">
+
+            <div class="product-card" data-category="polen">
                 <img src="IMG/polen1k.jpg" alt="Polen 1k">
-                <h3>Polen 1k</h3>
-                <div class="price-buy-container">
-                    <p>S/120.00</p>
-                    <button>Comprar</button>
+                <div class="product-details">
+                    <h3 class="product-title">Polen 1k</h3>
+                    <p class="product-price">S/120.00</p>
+                    <a href="#" class="add-to-cart">Comprar</a>
                 </div>
             </div>
-            <div class="product">
+
+            <div class="product-card" data-category="jalea">
                 <img src="IMG/jalea1k.jpg" alt="Jalea Real 1k">
-                <h3>Jalea Real 1k</h3>
-                <div class="price-buy-container">
-                    <p>S/2800.00</p>
-                    <button>Comprar</button>
+                <div class="product-details">
+                    <h3 class="product-title">Jalea Real 1k</h3>
+                    <p class="product-price">S/2800.00</p>
+                    <a href="#" class="add-to-cart">Comprar</a>
                 </div>
             </div>
-            <div class="product">
-                <img src="IMG/propoleo1k.jpg" alt="Propoleo 1k">
-                <h3>Propoleo 1k</h3>
-                <div class="price-buy-container">
-                    <p>S/70.00</p>
-                    <button>Comprar</button>
+
+            <div class="product-card" data-category="propoleo">
+                <img src="IMG/propoleo1k.jpg" alt="Propóleo 1k">
+                <div class="product-details">
+                    <h3 class="product-title">Propóleo 1k</h3>
+                    <p class="product-price">S/70.00</p>
+                    <a href="#" class="add-to-cart">Comprar</a>
                 </div>
             </div>
-            <div class="product">
+
+            <div class="product-card" data-category="miel">
                 <img src="IMG/polimiel1k.jpg" alt="Polimiel 1k">
-                <h3>Polimiel 1k</h3>
-                <div class="price-buy-container">
-                    <p>S/45.00</p>
-                    <button>Comprar</button>
+                <div class="product-details">
+                    <h3 class="product-title">Polimiel 1k</h3>
+                    <p class="product-price">S/45.00</p>
+                    <a href="#" class="add-to-cart">Comprar</a>
                 </div>
             </div>
-            <div class="product">
+
+            <div class="product-card" data-category="miel">
                 <img src="IMG/mielenpanal1k.jpg" alt="Miel en panal 1k">
-                <h3>Miel en panal 1k</h3>
-                <div class="price-buy-container">
-                    <p>S/50.00</p>
-                    <button>Comprar</button>
+                <div class="product-details">
+                    <h3 class="product-title">Miel en panal 1k</h3>
+                    <p class="product-price">S/50.00</p>
+                    <a href="#" class="add-to-cart">Comprar</a>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section id="nosotros" class="seccion-nosotros">
         <div class="hero">
@@ -293,6 +310,20 @@
 
     </footer>
     <script src="JS/menu.js"></script>
+    <script>
+        function filterProducts() {
+            const filterValue = document.getElementById('product-filter').value;
+            const products = document.querySelectorAll('.product-card');
+
+            products.forEach(product => {
+                if (filterValue === 'all' || product.getAttribute('data-category') === filterValue) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -14,7 +14,7 @@
 /********************************************************/
 
 header {
-    background-color: #69f788;
+    background-color: #34a14b;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -176,121 +176,104 @@ header {
 .section-products {
     padding: 20px;
     text-align: center;
-    background-color: #d5e0d7;
-
-
+    display: flex;
+    flex-direction: column;
 }
 
 .section-title {
-    text-transform: uppercase;
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .section-description {
-    font-size: 1.2em;
-    color: #555;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.filter-bar {
     margin-bottom: 20px;
 }
 
+.filter-bar select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 #products {
-    margin-left: auto;
     display: flex;
     flex-wrap: wrap;
-
-
-
-}
-
-
-.product {
-    background-color: #e7ecee;
-    width: 300px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-
-
-}
-
-.product:hover {
-    transform: scale(1.05);
-
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-
-}
-
-.product h3,
-.product p {
-    margin: 5px 0;
-}
-
-.price-buy-container {
-    display: flex;
-    align-items: center;
     justify-content: start;
-    border-radius: 25px;
-    background-color: #28a745;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    gap: 20px;
 }
 
-.price-buy-container p {
-    margin: 0;
+.product-card {
+    width: 300px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 16px;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 1.2rem;
     font-weight: bold;
     color: #333;
-    flex-grow: 1;
+    margin: 0 0 8px;
+    line-height: 1.4;
 }
 
-button {
+.product-price {
+    font-size: 1.1rem;
+    color: #0f0f0f;
+    font-weight: bold;
+    margin: 0 0 12px;
+}
+
+
+.add-to-cart {
+    display: inline-block;
     padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
-    /* Bordes redondeados del botón */
-    background-color: #bed8a5;
-    /* Color de fondo del botón */
-    color: #000;
-    /* Color del texto del botón */
+    text-align: center;
+    background-color: #34a14b;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
     text-transform: uppercase;
-    /* Texto en mayúsculas */
-    cursor: pointer;
-    font-family: Jomolhari;
-    transition: background 0.3s ease;
-    /* Transición suave del color de fondo */
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #E68A00;
-    /* Color de fondo al pasar el mouse */
+.add-to-cart:hover {
+    background-color: #00796b;
 }
 
-@media (max-width: 768px) {
-
-
+@media screen and (max-width: 768px) {
     #products {
-        margin-left: 0;
-        justify-content: center;
-    }
-
-    .product {
-        width: 100%;
-        max-width: 90%;
-        margin: 10px auto;
-    }
-
-    .price-buy-container {
         flex-direction: column;
         align-items: center;
-    }
-
-    button {
-        margin-top: 10px;
-        width: 100%;
     }
 }
 
@@ -299,7 +282,7 @@ button:hover {
 /* ************************************************/
 
 .seccion-nosotros .hero {
-    background-color: #96e97d;
+    background-color: #34a14b;
     color: #fff;
     text-align: center;
     padding: 20px ;
@@ -345,7 +328,7 @@ button:hover {
     font-size: 1.8em;
     margin-bottom: 10px;
     text-align: center;
-    border-bottom: 2px solid #004aad;
+    border-bottom: 1px solid #004aad;
     padding-bottom: 5px;
 }
 
@@ -370,7 +353,7 @@ button:hover {
 .seccion-nosotros .lema {
     text-align: center;
     padding: 20px;
-    background-color: #96e97d;
+    background-color: #34a14b;
     color: #fff;
     border-radius: 8px;
 }
