@@ -14,7 +14,7 @@
 /********************************************************/
 
 header {
-    background-color: rgba(79, 189, 79, );
+    background-color: #69f788;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -51,7 +51,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-weight: bold;
     padding: 10px;
     border-radius: 10px;
@@ -60,7 +60,7 @@ header {
 
 .nav-links a:hover {
     color: #000;
-    background-color: rgb(41, 170, 29);
+    background-color: rgb(126, 200, 212);
 
 }
 
@@ -839,9 +839,9 @@ footer a {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: rgba(47, 54, 47, 0.2);
+        background-color: rgba(47, 54, 47, 0.7);
         position: absolute;
-        top: 60px;
+        top: 80px;
         right: 0;
         width: 100%;
         height: 100vh;
